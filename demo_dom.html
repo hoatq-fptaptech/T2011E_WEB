@@ -36,8 +36,15 @@
     var m = 10;
     var s = 0;
     var timer = setInterval(function () {
-        min.innerText = m>10?m:"0"+m;
-        sec.innerText = s>10?s:"0"+s;
+        min.innerText = m>=10?m:"0"+m;
+        // tuong duong
+        // if(m>=10){
+        //     min.innerText = m;
+        // }else{
+        //     min.innerText = "0"+m;
+        // }
+
+        sec.innerText = s>=10?s:"0"+s;
         s--;
         if(s<0){
             m--;
@@ -47,7 +54,7 @@
             clearInterval(timer);
             console.log("Bùm....");
         }
-    },10);
+    },1000);
 </script>
 </body>
 </html>
